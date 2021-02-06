@@ -9,4 +9,4 @@ spec:
   capacity:
     storage: 5Gi
   hostPath:
-    path: "dataDirectory"
+    path: "/dataDirectory"
