@@ -11,3 +11,5 @@ spec:
   - name: container2
     image: allingeek/ch6_ipc
     command: ["./ipc", "-consumer"]
+
+  restartPolicy: Never
