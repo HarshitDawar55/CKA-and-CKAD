@@ -14,10 +14,18 @@ spec:
         cpu: "500m"                # This means 0.5 vCPU
     volumeMounts:
     - name: webserver
-      mountPath: /usr/share/nginx/html
+      mountPath: /usr/share/nginx/html # In this Path Nginx Generates Log
+
+  - name: debian
+    image: debian
+    resources:
+      limits:
+        memory: "500Mi"             # 500 MiB of RAM
+        cpu: "500m"   
+    
 
 
-  volumes:
+  volumes:                  # Creating a volume to be shared between the Multiple Containers in a single POD.
   - name: webserver
     emptyDir: {}
 
