@@ -22,9 +22,10 @@ spec:
       limits:
         memory: "500Mi"             # 500 MiB of RAM
         cpu: "500m"   
+    volumeMounts:
+    - name: webserver
+      mountPath: /html
     
-
-
   volumes:                  # Creating a volume to be shared between the Multiple Containers in a single POD.
   - name: webserver
     emptyDir: {}
